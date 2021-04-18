@@ -5,6 +5,7 @@
   padding: 20px;
   max-width: 565px;
   font-family: monospace;
+  margin-top: 30px;
 }
 
 #title-city {
@@ -128,4 +129,10 @@ hr {
 
 .week {
   padding-left: 20px;
+}
+
+p {
+  text-align: center;
+  font-family: monospace;
+  padding-right: 400px;
 }
