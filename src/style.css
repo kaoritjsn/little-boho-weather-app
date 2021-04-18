@@ -1,0 +1,131 @@
+.container {
+  background-color: rgb(248, 200, 128);
+  border-radius: 10px;
+  color: white;
+  padding: 20px;
+  max-width: 565px;
+  font-family: monospace;
+}
+
+#title-city {
+  color: white;
+  margin: 0;
+  font-weight: 900;
+  font-size: 50px;
+  padding-top: 0px;
+  margin-bottom: 0;
+  line-height: 0;
+}
+
+#date {
+  margin: 0;
+  font-size: 25px;
+  margin-left: 0;
+  margin-top: 5px;
+}
+
+#description {
+  font-size: 20px;
+  line-height: 5px;
+  margin: 5px;
+  margin-left: 0;
+}
+
+form {
+  display: inline-block;
+  margin-bottom: 30px;
+}
+
+#city-input {
+  border-radius: 10px;
+  font-family: monospace;
+  padding: 15px 53px;
+  border: 1px solid #ffffff;
+  transition: 2ms all ease-in-out;
+}
+
+#city-input:placeholder {
+  text-align: left;
+}
+#city-input:hover {
+  cursor: pointer;
+  background-color: rgb(240, 217, 187);
+}
+#search-button {
+  border-radius: 10px;
+  font-family: monospace;
+  padding: 15px;
+  border: 1px solid #ffffff;
+  transition: 2ms all ease-in-out;
+  background-color: white;
+}
+
+#searchButton:hover {
+  background-color: rgb(240, 217, 187);
+}
+
+button {
+  border-radius: 10px;
+  font-family: monospace;
+  padding: 15px;
+  border: 1px solid #ffffff;
+  transition: 2ms all ease-in-out;
+  display: inline;
+}
+input:hover {
+  cursor: pointer;
+  background-color: rgb(240, 217, 187);
+}
+
+#number {
+  font-size: 70px;
+  font-weight: 900;
+}
+.weather {
+  list-style: none;
+  display: inline-block;
+  border-color: black;
+  padding: 10px;
+  border-radius: 15px;
+  text-align: center;
+}
+i {
+  font-size: 40px;
+}
+.details {
+  font-size: 15px;
+  display: inline-block;
+  position: relative;
+  right: 0px;
+  font-family: monospace;
+  line-height: 20px;
+  list-style-type: none;
+}
+
+.weatherDetails {
+  margin: 30px;
+  margin-left: 10px;
+}
+
+#c:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+#f:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+hr {
+  border: 2px dashed white;
+}
+
+.texts {
+  text-align: center;
+  font-family: monospace;
+  font-size: 15px;
+}
+
+.week {
+  padding-left: 20px;
+}

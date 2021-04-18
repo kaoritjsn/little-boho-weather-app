@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/5a7b2ca90a.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <form id="search-form">
+        <input
+          type="text"
+          placeholder="Type a city..."
+          id="city-input"
+          autofocus="on"
+          autocomplete="off"
+        />
+        <input type="submit" value="search" id="search-button" />
+      </form>
+      <button id="current-location-button">current location</button>
+      <h1 class="title">
+        <span id="title-city">Kyoto</span>
+      </h1>
+      <h2 id="description"></h2>
+      <h2 id="date"></h2>
+      <span id="day-time"></span>
+      <div class="row">
+        <div class="col-6">
+          <h2>
+            <span id="number">9</span> <span id="c">°C</span>|<span id="f"
+              >°F
+            </span>
+          </h2>
+        </div>
+        <div class="col-6">
+          <div class="details">
+            <ul class="weatherDetails">
+              <li>Humidity: <span id="humidity"></span>%</li>
+              <li>Wind: <span id="wind-speed"></span>km/h</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="clearfix">
+        <ul class="week">
+          <li class="weather">
+            <div class="texts">Mon</div>
+            <br /><i class="fas fa-sun"></i>
+          </li>
+          <li class="weather">
+            <div class="texts">Tue</div>
+            <br /><i class="fas fa-cloud-sun-rain"></i>
+          </li>
+          <li class="weather">
+            <div class="texts">Wed</div>
+            <br /><i class="far fa-snowflake"></i>
+          </li>
+          <li class="weather">
+            <div class="texts">Thu</div>
+            <br /><i class="fas fa-sun"></i>
+          </li>
+          <li class="weather">
+            <div class="texts">Fri</div>
+            <br /><i class="fas fa-cloud-showers-heavy"></i>
+          </li>
+          <li class="weather">
+            <div class="texts">Sat</div>
+            <br /><i class="fas fa-sun"></i>
+          </li>
+          <li class="weather">
+            <div class="texts">Sun</div>
+            <br /><i class="fas fa-cloud-sun-rain"></i>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script src="src/script.js"></script>
+  </body>
+</html>
