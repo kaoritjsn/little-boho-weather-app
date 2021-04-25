@@ -36,6 +36,8 @@ function displayWeatherCondition(response) {
 
   document.querySelector("#description").innerHTML =
     response.data.weather[0].main;
+
+  celsiusTemperature = response.data.main.temp;
 }
 
 function searchCity(city) {
@@ -68,23 +70,32 @@ showinfo.addEventListener("submit", handleSubmit);
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
-function showCelcius(event) {
-  event.preventDefault();
-  let changeCelcius = document.querySelector(".number");
-  changeCelcius.innerHTML = 23;
-}
-
-let celcius = document.querySelector("#c");
-celcius.addEventListener("click", showCelcius);
-
 function showFahren(event) {
   event.preventDefault();
-  let changeFahren = document.querySelector(".number");
-  changeFahren.innerHTML = 72;
+  let changeFahren = document.querySelector("#number");
+
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 52;
+  changeFahren.innerHTML = Math.round(fahrenheitTemperature);
 }
 
-let Fahren = document.querySelector("#f");
-Fahren.addEventListener("click", showFahren);
+function showCelcius(event) {
+  event.preventDefault();
+
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  let changeCelcius = document.querySelector("#number");
+  changeCelcius.innerHTML = Math.round(celsiusTemperature);
+}
+
+let celsiusTemperature = null;
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", showCelcius);
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", showFahren);
 
 let dateElement = document.querySelector("#date");
 let currentTime = new Date();

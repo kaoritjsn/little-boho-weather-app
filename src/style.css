@@ -28,7 +28,7 @@
 }
 
 #description {
-  font-size: 2px;
+  font-size: 20px;
   line-height: 5px;
   margin: 5px;
   margin-left: 0;
@@ -83,6 +83,13 @@ input:hover {
   font-size: 70px;
   font-weight: 900;
 }
+
+#units {
+  font-size: 20px;
+  position: relative;
+  top: -32px;
+}
+
 .weather {
   list-style: none;
   display: inline-block;
@@ -109,17 +116,9 @@ i {
   margin-left: 10px;
 }
 
-#c:hover {
-  text-decoration: underline;
-  cursor: pointer;
-}
-#f:hover {
-  text-decoration: underline;
-  cursor: pointer;
-}
-
 hr {
   border: 2px dashed white;
+  margin-top: 0;
 }
 
 .texts {
