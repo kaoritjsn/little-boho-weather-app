@@ -18,15 +18,17 @@
   line-height: 0;
 }
 
+.title {
+  margin-bottom: 0;
+}
+
 #date {
-  margin: 0;
-  font-size: 25px;
+  font-size: 20px;
   margin-left: 0;
-  margin-top: 5px;
 }
 
 #description {
-  font-size: 20px;
+  font-size: 2px;
   line-height: 5px;
   margin: 5px;
   margin-left: 0;
@@ -43,11 +45,10 @@ form {
   padding: 15px 53px;
   border: 1px solid #ffffff;
   transition: 2ms all ease-in-out;
+  padding-left: 10px;
+  padding-right: 96px;
 }
 
-#city-input:placeholder {
-  text-align: left;
-}
 #city-input:hover {
   cursor: pointer;
   background-color: rgb(240, 217, 187);
