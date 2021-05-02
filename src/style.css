@@ -79,15 +79,36 @@ input:hover {
   background-color: rgb(240, 217, 187);
 }
 
+div.col-6 {
+  padding: 0;
+}
+
+img {
+  margin-left: 0;
+  padding-left: 0;
+}
+
 #number {
   font-size: 70px;
   font-weight: 900;
+  position: relative;
+  top: 6px;
 }
 
 #units {
   font-size: 20px;
   position: relative;
-  top: -32px;
+  top: -25px;
+
+  letter-spacing: 2px;
+}
+
+#celsius-link {
+  color: inherit;
+}
+
+#fahrenheit-link {
+  color: inherit;
 }
 
 .weather {
@@ -98,21 +119,22 @@ input:hover {
   border-radius: 15px;
   text-align: center;
 }
+
 i {
   font-size: 40px;
 }
+
 .details {
-  font-size: 15px;
+  font-size: 16px;
   display: inline-block;
-  position: relative;
-  right: 0px;
+  padding-top: 8px;
   font-family: monospace;
   line-height: 20px;
   list-style-type: none;
 }
 
 .weatherDetails {
-  margin: 30px;
+  margin-top: 12px;
   margin-left: 10px;
 }
 
