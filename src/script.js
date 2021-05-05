@@ -133,16 +133,6 @@ showinfo.addEventListener("submit", handleSubmit);
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
-function showFahren(event) {
-  event.preventDefault();
-  let changeFahren = document.querySelector("#number");
-
-  celsiusLink.classList.remove("active");
-  fahrenheitLink.classList.add("active");
-  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 52;
-  changeFahren.innerHTML = Math.round(fahrenheitTemperature);
-}
-
 function showCelcius(event) {
   event.preventDefault();
 
@@ -156,9 +146,6 @@ let celsiusTemperature = null;
 
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", showCelcius);
-
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", showFahren);
 
 let dateElement = document.querySelector("#date");
 let currentTime = new Date();
