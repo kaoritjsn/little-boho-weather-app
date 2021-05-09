@@ -42,11 +42,11 @@ form {
 #city-input {
   border-radius: 10px;
   font-family: monospace;
-  padding: 15px 53px;
+  padding: 15px;
   border: 1px solid #ffffff;
   transition: 2ms all ease-in-out;
   padding-left: 10px;
-  padding-right: 96px;
+  padding-right: 207px;
 }
 
 #city-input:hover {
@@ -56,10 +56,11 @@ form {
 #search-button {
   border-radius: 10px;
   font-family: monospace;
-  padding: 15px;
+  padding: 15px 40px;
   border: 1px solid #ffffff;
   transition: 2ms all ease-in-out;
   background-color: white;
+  margin-left: 5px;
 }
 
 #searchButton:hover {
@@ -95,20 +96,12 @@ img {
   top: 6px;
 }
 
-#units {
-  font-size: 20px;
+#unit {
+  font-size: 30px;
   position: relative;
-  top: -25px;
+  top: -20px;
 
   letter-spacing: 2px;
-}
-
-#celsius-link {
-  color: inherit;
-}
-
-#fahrenheit-link {
-  color: inherit;
 }
 
 .weather {
@@ -135,7 +128,7 @@ i {
 
 .weatherDetails {
   margin-top: 12px;
-  margin-left: 10px;
+  padding-left: 15px;
 }
 
 hr {
@@ -162,18 +155,25 @@ p {
 .weather-forecast {
   margin-top: 20px;
   text-align: center;
-  color: #000;
+  color: white;
+}
+
+.weather-forecast img {
+  width: 45px;
 }
 
 .weather-forecast-date {
   font-size: 16px;
-  opacity: 0.5;
 }
 
 .weather-forecast-temperature-min {
-  opacity: 0.5;
+  opacity: 0.7;
 }
 
 .weather-forecast-temperatures {
   font-size: 13px;
+}
+
+#forecast {
+  padding: 10px;
 }

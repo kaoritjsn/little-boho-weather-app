@@ -73,7 +73,6 @@ function displayForecast(response) {
 }
 
 function getForecast(coordinates) {
-  console.log(coordinates);
   let apiKey = "faeba669ef6469eac1cb536e95328bdd";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&exclude={part}&appid=${apiKey}&units=metric`;
   console.log(apiUrl);
@@ -87,6 +86,7 @@ function displayWeatherCondition(response) {
   let windElement = document.querySelector("#wind-speed");
   let descriptionElement = document.querySelector("#description");
   let iconElement = document.querySelector("#icon");
+  let feelsLikeElement = document.querySelector("#feels-like");
 
   cityElement.innerHTML = response.data.name;
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
@@ -94,6 +94,9 @@ function displayWeatherCondition(response) {
   windElement.innerHTML = Math.round(response.data.wind.speed);
   descriptionElement.innerHTML = response.data.weather[0].main;
   celsiusTemperature = response.data.main.temp;
+  feelsLikeElement.innerHTML = Math.round(response.data.main.feels_like);
+
+  console.log(response.data);
   iconElement.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
@@ -122,30 +125,8 @@ function searchLocation(position) {
   axios.get(apiUrl).then(displayWeatherCondition);
 }
 
-function getCurrentLocation(event) {
-  event.preventDefault();
-  navigator.geolocation.getCurrentLocation(searchLocation);
-}
-
 let showinfo = document.querySelector("#search-button");
 showinfo.addEventListener("submit", handleSubmit);
-
-let currentLocationButton = document.querySelector("#current-location-button");
-currentLocationButton.addEventListener("click", getCurrentLocation);
-
-function showCelcius(event) {
-  event.preventDefault();
-
-  celsiusLink.classList.add("active");
-  fahrenheitLink.classList.remove("active");
-  let changeCelcius = document.querySelector("#number");
-  changeCelcius.innerHTML = Math.round(celsiusTemperature);
-}
-
-let celsiusTemperature = null;
-
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", showCelcius);
 
 let dateElement = document.querySelector("#date");
 let currentTime = new Date();

@@ -27,9 +27,9 @@
           autofocus="on"
           autocomplete="off"
         />
-        <input type="submit" value="search" id="search-button" />
+        <input type="submit" value="Search" id="search-button" />
       </form>
-      <button id="current-location-button">current location</button>
+
       <h1 class="title">
         <span id="title-city">Kyoto</span>
       </h1>
@@ -41,14 +41,13 @@
           <h2>
             <img src="" alt="Clear" id="icon" class="float-left" />
             <span id="number"></span>
-            <span id="units">
-              <a href="#" id="celsius-link" class="active">°C</a>
-            </span>
+            <span id="unit"> °C </span>
           </h2>
         </div>
         <div class="col-6">
           <div class="details">
             <ul class="weatherDetails">
+              <li>Feels like: <span id="feels-like"></span>°C</Canvas></li>
               <li>Humidity: <span id="humidity"></span>%</li>
               <li>Wind: <span id="wind-speed"></span> km/h</li>
             </ul>
